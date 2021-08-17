@@ -22,18 +22,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/InfoGather.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="51" column="36" selection-end-line="90" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TeamRanking.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -65,6 +53,9 @@
       <dir>C:\Users\RicoF\PycharmProjects\FootballPredict</dir>
     </dirStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -75,12 +66,13 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="504" />
     <option name="y" value="36" />
-    <option name="width" value="1530" />
+    <option name="width" value="2372" />
     <option name="height" value="1926" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -101,6 +93,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -204,23 +197,22 @@
       <option name="presentableId" value="Default" />
       <updated>1628612163960</updated>
       <workItem from="1628612170861" duration="13000000" />
-      <workItem from="1628666681641" duration="20786000" />
+      <workItem from="1628666681641" duration="21512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33786000" />
+    <option name="totallyTimeSpent" value="34512000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1346" height="901" extended-state="6" />
-    <editor active="true" />
+    <frame x="224" y="16" width="1054" height="856" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980315" visible="true" weight="0.25348836" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.5019685" side_tool="true" visible="true" weight="0.25348836" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978355" visible="true" weight="0.32765532" />
+      <window_info id="Structure" order="1" sideWeight="0.5021645" side_tool="true" visible="true" weight="0.32765532" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4976744" visible="true" weight="0.34196892" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4976744" visible="true" weight="0.36363637" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4992248" weight="0.39896372" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />

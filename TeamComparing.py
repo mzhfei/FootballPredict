@@ -1,4 +1,6 @@
-import InfoGather
+
+import InfoGathering
+
 import math
 
 teams = {}
@@ -88,9 +90,41 @@ def calculateAGame(gameDict: dict):
     teams[away] = updateElo(awayElo, homeELo, math.fabs(gameResult-1), -100, k)
 
 
-for year in range(2010, 2021):
-    for i in InfoGather.getYearResult('LALIGA', year):
-        calculateAGame(i)
 
-for k in sorted(teams, key=teams.get):
-    print('Team: ' + k + '\t\t\tRank Point: ' + str(teams[k]))
+
+if __name__ == '__main__':
+    leagues = InfoGathering.getLeagueNames()
+    for i in range(len(leagues)):
+        print(i+1, " : ", leagues[i])
+    league_choice = input("Please Enter The Number of the League: ")
+    league_year_start = input("Please Enter The Starting Season Of the League From 2000 to 2019(Use The Early Year, "
+                              "For Example 2019 for 2019-2020)")
+    league_year_end = input("Please Enter The Last Season Of the League from 2001 to 2020(Use The Early Year, "
+                            "For Example 2019 for 2019-2020)")
+
+    league_year_start = int(league_year_start)
+    league_year_end = int(league_year_end)
+    league_choice = int(league_choice)
+
+    while league_choice > len(leagues) or league_choice <= 0:
+        league_choice = input("Please Re-Enter A Valid Number")
+        league_choice = int(league_choice)
+
+    while league_year_start < 2000 or league_year_start > 2019:
+        league_year_start = input("Please Re-Enter A Valid Start Season")
+        league_year_start = int(league_year_start)
+
+    while league_year_end< 2001 or league_year_start > 2020:
+        league_year_end = input("Please Re-Enter A Valid Last Season")
+        league_year_end = int(league_year_end)
+
+    print('You have chose ', leagues[league_choice-1], " from ", league_year_start, " to ", league_year_end)
+
+    print("Please Wait...")
+    for year in range(league_year_start, league_year_end+1):
+        print("Please Wait... ")
+        for i in InfoGathering.getYearResult(leagues[league_choice-1], year):
+            calculateAGame(i)
+
+    for k in sorted(teams, key=teams.get):
+        print('Team: ' + k + '\t\t\tRank Point: ' + str(teams[k]))

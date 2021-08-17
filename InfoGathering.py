@@ -32,10 +32,11 @@ http.headers = headers
 test_url_laliga = "laliga/gesamtspielplan/wettbewerb/ES1/saison_id/2018"
 
 """
+:param league: A legal league name exactly same as the keys in league website
+:param year: A legal year number after 2000 before 2021
+:return: A list of game result
+:post effects: no
 """
-
-
-
 def getYearResult(league, year):
     def get_result(match_bs4):
         team1 = match_bs4.find('td', attrs='text-right no-border-rechts hauptlink').find('a').text
@@ -88,4 +89,4 @@ def getYearResult(league, year):
 
 
 def getLeagueNames():
-    return league_websites.keys()
+    return list(league_websites.keys())
