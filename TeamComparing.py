@@ -21,6 +21,17 @@ def getTeamElo(teamName: str):
         return 1600
 
 """
+:param teamName: A str contains a legal team name
+:return: the elo points of corresponding team, if no team added yet, return 1600 as a default value
+:post effects: if not corresponding team exist in dictionary teams, will create a new one in the dictionary
+
+"""
+
+def setTeamElo(teamName: str, newElo:float):
+
+    teams[teamName] = newElo
+
+"""
 :param opponentElo: The elo point of the opponent
 :param gameResult:  the result of the game, 1 for win, 0 for draw and -1 for lose
 :param factor:  if the team playing at home, temporary elo point + 100, if playing away, temporary points - 100
@@ -56,6 +67,8 @@ sample dict format: {'HomeTeam': 'SD Eibar',
 
 """
 def calculateAGame(gameDict: dict):
+
+# get the datas
     home = gameDict['HomeTeam']
     away = gameDict['AwayTeam']
     homeGoal = gameDict['HomeGoal']
@@ -65,7 +78,7 @@ def calculateAGame(gameDict: dict):
     homeELo = getTeamElo(home)
     awayElo = getTeamElo(away)
 
-
+# calculated factor k base on the game result and differences of elo points
     gameResult = 0.5
     eloDifference = (homeELo+awayElo)/2
     if homeGoal > awayGoal:
@@ -86,9 +99,12 @@ def calculateAGame(gameDict: dict):
     else:
         k = 28
 
-    teams[home] = updateElo(homeELo, awayElo, gameResult, 100, k)
-    teams[away] = updateElo(awayElo, homeELo, math.fabs(gameResult-1), -100, k)
+# calculate new elo points and update
+    newHomeElo = updateElo(homeELo, awayElo, gameResult, 100, k)
+    newAwayElo = updateElo(awayElo, homeELo, math.fabs(gameResult-1), -100, k)
 
+    setTeamElo(away,newAwayElo)
+    setTeamElo(home,newHomeElo)
 
 
 
